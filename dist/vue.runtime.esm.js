@@ -5354,6 +5354,7 @@ function createComment (text) {
 }
 
 function insertBefore (parentNode, newNode, referenceNode) {
+  if (!parentNode.contains(referenceNode)) return;
   parentNode.insertBefore(newNode, referenceNode);
 }
 
